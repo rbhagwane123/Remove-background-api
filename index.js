@@ -39,9 +39,9 @@ app.post("/api/remove", (req, res) => {
           request.statusCode,
           body.toString("utf8")
         );
-      const bufferData = Buffer.from(body, "base64");
-      res.contentType("image/png");
-      res.send(bufferData);
+      // const bufferData = Buffer.from(body, "base64");
+      // res.contentType("image/png");
+      res.send(body);
       //fs.writeFileSync("./transparent-image/removed.png", body);
     }
   );
